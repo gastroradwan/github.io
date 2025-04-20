@@ -1,0 +1,9 @@
+
+body { font-family: Roboto, sans-serif; margin: 0; padding: 0; background: #f6f6f6; }
+.container { max-width: 960px; margin: auto; padding: 20px; }
+header { background: #c00; color: white; padding: 10px 0; }
+header nav a { margin: 0 15px; color: white; text-decoration: none; }
+.hero { background: white; padding: 40px 0; text-align: center; }
+.services ul { list-style: none; padding: 0; }
+.services li { margin: 10px 0; }
+footer { background: #222; color: white; text-align: center; padding: 20px 0; }
