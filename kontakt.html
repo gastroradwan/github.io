@@ -1,1 +1,65 @@
-<h1>Kontaktujte nás</h1><p>info@gastroradwan.eu</p>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | GASTRORADWAN</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>GASTRORADWAN</h1>
+      <nav>
+        <a href="index.html">Úvod</a>
+        <a href="ezapp.html">EZApp</a>
+        <a href="skoleni.html">Školení</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Kontaktujte nás</h2>
+      <p>Máte dotaz? Neváhejte nám napsat nebo zavolat.</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h3>GASTRORADWAN s.r.o.</h3>
+      <p>
+        Ostravská 262<br>
+        73562 Český Těšín – Mosty<br>
+        IČO: 05690919<br>
+        Email: <a href="mailto:info@gastroradwan.eu">info@gastroradwan.eu</a><br>
+        Telefon: +420 777 123 456
+      </p>
+
+      <h3>Kontaktní formulář</h3>
+      <form action="https://formspree.io/f/your_form_id" method="POST">
+        <label for="name">Jméno:</label><br />
+        <input type="text" id="name" name="name" required><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required><br />
+
+        <label for="message">Zpráva:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br />
+
+        <button type="submit">Odeslat zprávu</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, 73562 Český Těšín</p>
+      <p>Email: info@gastroradwan.eu</p>
+    </div>
+  </footer>
+</body>
+</html>
