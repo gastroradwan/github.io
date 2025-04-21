@@ -5,7 +5,7 @@
   padding: 0;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
@@ -13,7 +13,6 @@ body {
 header {
   background: #c80000;
   color: #fff;
-  padding: 1rem 0;
 }
 header .container {
   display: flex;
@@ -21,10 +20,11 @@ header .container {
   align-items: center;
   max-width: 1100px;
   margin: auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .logo {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 nav ul {
   list-style: none;
@@ -34,54 +34,67 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+nav a.active {
+  background: white;
+  color: #c80000;
 }
 .hero {
   background: #eee;
-  padding: 3rem 1rem;
   text-align: center;
+  padding: 3rem 1rem 2rem;
 }
 .hero h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
-.hero-buttons .btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background: #c80000;
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.cta-buttons a {
+  background-color: #c80000;
   color: white;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  margin: 0.5rem;
+  display: inline-block;
+}
+.cta-buttons a:hover {
+  background-color: #a00000;
 }
 .services {
-  padding: 2rem 1rem;
-}
-.services h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.service-boxes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #fff;
 }
-.service {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 280px;
+.service-box {
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.service img {
+.service-box img {
   width: 60px;
+  height: 60px;
   margin-bottom: 1rem;
 }
 footer {
-  background: #333;
-  color: white;
+  background-color: #222;
+  color: #ddd;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
