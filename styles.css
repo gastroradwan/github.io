@@ -1,159 +1,72 @@
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Základní barvy */
-:root {
-  --primary: #c60000;
-  --secondary: #3a3a3a;
-  --light: #f9f9f9;
-  --dark: #1a1a1a;
-  --white: #ffffff;
-}
-
-/* Tělo stránky */
+/* ====== Základní reset a obecné styly ====== */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
-  color: var(--dark);
-  background-color: var(--white);
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000;
 }
 
-/* Hlavní kontejner */
-main.content,
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* Záhlaví */
-header {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 20px 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-/* Navigace */
-nav {
-  background-color: var(--primary);
+header, nav, footer {
+  background-color: #d90000;
+  color: white;
+  padding: 10px;
   text-align: center;
 }
 
 nav a {
-  display: inline-block;
-  color: var(--white);
+  color: white;
+  margin: 0 10px;
   text-decoration: none;
-  padding: 14px 20px;
-  transition: background 0.3s;
+  font-weight: bold;
 }
 
 nav a:hover {
-  background-color: var(--secondary);
-}
-
-/* Sekce */
-section {
-  margin: 40px 0;
-}
-
-/* Nadpisy */
-h1, h2, h3 {
-  color: var(--primary);
-  margin-bottom: 20px;
-}
-
-/* Formulář */
-form {
-  background-color: var(--light);
-  padding: 20px;
-  border-radius: 6px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button[type="submit"] {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: var(--secondary);
-}
-
-/* Odkazy */
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: underline;
 }
 
-/* Ikony a boxy pro služby */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: center;
-  gap: 20px;
+/* ====== Hlavní obsah a layout ====== */
+main.content, .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.6;
 }
 
-.service-box {
-  flex: 1 1 300px;
-  background-color: var(--light);
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+/* ====== Nadpisy ====== */
+h1, h2, h3 {
+  color: #d90000;
 }
 
-.service-box img {
-  height: 60px;
-  margin-bottom: 20px;
+/* ====== Seznam s odrážkami ====== */
+ul.checklist {
+  padding-left: 20px;
+  list-style: disc;
 }
 
-/* Zápatí */
+/* ====== Styl pro tlačítka ====== */
+.btn, button {
+  display: inline-block;
+  background-color: #d90000;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover, button:hover {
+  background-color: #b00000;
+}
+
+/* ====== Paticka ====== */
 footer {
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: #111;
+  color: white;
+  padding: 15px;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-/* Responsivita */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    padding: 10px;
-  }
-
-  .services {
-    flex-direction: column;
-    align-items: center;
-  }
+  font-size: 0.9em;
 }
