@@ -3,136 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GASTRORADWAN s.r.o.</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <title>GASTRORADWAN – Elektrorevize, školení, gastro vybavení</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    body {
-      font-family: Roboto, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f6f6f6;
-    }
-    header {
-      background: #c00;
-      color: white;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 15px;
-      color: white;
-      text-decoration: none;
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-    }
-    .hero {
-      background: white;
-      padding: 40px 0;
-      text-align: center;
-    }
-    .services {
-      background: #ffffff;
-      padding: 40px 0;
-    }
-    .service-box {
-      background: #f0f0f0;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .service-box img {
-      height: 60px;
-      margin-bottom: 15px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #c00;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .info-bar {
-      background-color: #fff4cc;
-      color: #333;
-      text-align: center;
-      padding: 10px 0;
-      font-weight: bold;
-      font-size: 15px;
-      border-bottom: 1px solid #e0c96e;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EBWL1MSFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5EBWL1MSFN');
+  </script>
 </head>
 <body>
   <header>
-    <div class="container header-content">
-      <h1>GASTRORADWAN</h1>
-      <nav>
-        <a href="index.html">Úvod</a>
-        <a href="ezapp.html">EZApp</a>
-        <a href="skoleni.html">Školení</a>
-        <a href="gastro.html">Gastro vybavení</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="onas.html">O nás</a>
-        <a href="https://shop.gastroradwan.eu" target="_blank">E-shop</a>
-      </nav>
-    </div>
+    <nav>
+      <div class="logo">GASTRORADWAN</div>
+      <ul>
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="#">O nás</a></li>
+        <li><a href="ezapp.html">EZApp</a></li>
+        <li><a href="skoleni.html">Školení</a></li>
+        <li><a href="#">Gastro vybavení</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="info-bar">
-    Některé části stránek jsou ve výstavbě. Děkujeme za pochopení.
-  </div>
-
-  <section class="hero">
-    <div class="container">
-      <h2>Specializované služby v elektrotechnice i gastro oblasti</h2>
+  <main>
+    <section class="hero">
+      <h1>Specializované služby v elektrotechnice i gastro oblasti</h1>
       <p>GASTRORADWAN s.r.o. spojuje tři samostatné oblasti služeb:</p>
-    </div>
-  </section>
+    </section>
 
-  <section class="services">
-    <div class="container">
+    <section class="services">
       <div class="service-box">
-        <img src="https://img.icons8.com/ios-filled/100/electrical.png" alt="Elektrorevize"/>
-        <h3>Elektrorevize</h3>
+        <img src="https://img.icons8.com/ios-filled/50/000000/electrical.png" alt="Ikona elektrorevize" />
+        <h2>Elektrorevize</h2>
         <p>Provádíme výchozí i pravidelné revize elektrických zařízení, strojů, zásuvek a hromosvodů dle platných norem a legislativy.</p>
-        <a href="ezapp.html" class="btn">Více informací</a>
+        <a href="ezapp.html">Více o elektrorevizích</a>
       </div>
+
       <div class="service-box">
-        <img src="https://img.icons8.com/ios-filled/100/classroom.png" alt="Školení"/>
-        <h3>Školení elektrotechniků</h3>
-        <p>Organizujeme školení a přezkoušení osob znalých dle NV č. 194/2022 Sb., včetně online testů, materiálů a certifikace.</p>
-        <a href="skoleni.html" class="btn">Více informací</a>
+        <img src="https://img.icons8.com/ios-filled/50/000000/classroom.png" alt="Ikona školení" />
+        <h2>Školení elektrotechniků</h2>
+        <p>Připravujeme elektrotechniky na odbornou způsobilost dle §5–§7 a provádíme přezkoušení s možností online testů.</p>
+        <a href="skoleni.html">Více o školení</a>
       </div>
+
       <div class="service-box">
-        <img src="https://img.icons8.com/ios-filled/100/restaurant.png" alt="Gastro vybavení"/>
-        <h3>Gastro vybavení</h3>
-        <p>Dodáváme kvalitní gastro zařízení pro restaurace, školní jídelny i provozovny – vybavení přímo od výrobců STALGAST a TOMGAST.</p>
-        <a href="gastro.html" class="btn">Více informací</a>
-        <a href="https://shop.gastroradwan.eu" target="_blank" class="btn">Přejít na e-shop</a>
+        <img src="https://img.icons8.com/ios-filled/50/000000/restaurant.png" alt="Ikona gastro vybavení" />
+        <h2>Prodej gastro vybavení</h2>
+        <p>Nabízíme široký sortiment kvalitního gastro vybavení pro restaurace, jídelny a provozy. Přímá spolupráce s výrobci.</p>
+        <a href="https://shop.gastroradwan.eu">Navštivte e-shop</a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="info-box">
+      <p><strong>ℹ️ Upozornění:</strong> Některé části webu jsou ve výstavbě.</p>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, 73562 Český Těšín</p>
-      <p>Email: info@gastroradwan.eu</p>
-    </div>
+    <p>&copy; 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín<br />
+    Email: <a href="mailto:info@gastroradwan.eu">info@gastroradwan.eu</a></p>
   </footer>
 </body>
 </html>
