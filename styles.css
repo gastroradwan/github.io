@@ -70,3 +70,26 @@ footer {
   text-align: center;
   font-size: 0.9em;
 }
+.top-bar {
+  background: #c80000;
+  padding: 1rem;
+  color: white;
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.main-nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+}
