@@ -6,6 +6,11 @@
   <title>Kontakt | GASTRORADWAN</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    function showConfirmation() {
+      alert('Děkujeme za odeslání zprávy! Odpovíme co nejdříve.');
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -30,8 +35,14 @@
       Telefon: +420 777 123 456
     </p>
 
+    <h3>Kde nás najdete</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2532.893828530872!2d18.6097292!3d49.7285909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e43e6fb05d65%3A0x16647bb6aa3f7928!2sOstravsk%C3%A1%20262%2C%20735%2062%20%C4%8Cesk%C3%BD%20T%C4%9B%C5%A1%C3%ADn!5e0!3m2!1scs!2scz!4v1713719876543"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     <h3>Napište nám</h3>
-    <form action="https://formspree.io/f/your_form_id" method="POST">
+    <form action="https://formspree.io/f/your_form_id" method="POST" onsubmit="showConfirmation()">
+      <input type="hidden" name="_subject" value="Zpráva z webu GASTRORADWAN">
       <label for="name">Jméno:</label><br />
       <input type="text" id="name" name="name" required><br />
 
@@ -40,6 +51,9 @@
 
       <label for="message">Zpráva:</label><br />
       <textarea id="message" name="message" rows="5" required></textarea><br />
+
+      <!-- Antispam honeypot -->
+      <input type="text" name="_gotcha" style="display:none" />
 
       <button type="submit">Odeslat</button>
     </form>
