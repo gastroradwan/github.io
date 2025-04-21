@@ -1,9 +1,128 @@
 
-body { font-family: Roboto, sans-serif; margin: 0; padding: 0; background: #f6f6f6; }
-.container { max-width: 960px; margin: auto; padding: 20px; }
-header { background: #c00; color: white; padding: 10px 0; }
-header nav a { margin: 0 15px; color: white; text-decoration: none; }
-.hero { background: white; padding: 40px 0; text-align: center; }
-.services ul { list-style: none; padding: 0; }
-.services li { margin: 10px 0; }
-footer { background: #222; color: white; text-align: center; padding: 20px 0; }
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+header {
+  background-color: #b00;
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+nav {
+  background-color: #900;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.announcement {
+  background-color: #fff4cc;
+  color: #000;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.box {
+  background: white;
+  flex: 1 1 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.box img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.box h2 {
+  margin: 10px 0;
+  color: #b00;
+}
+
+.box p {
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+.box a {
+  margin-top: 15px;
+  color: #900;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  nav {
+    font-size: 14px;
+  }
+}
