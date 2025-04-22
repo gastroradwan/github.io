@@ -6,8 +6,144 @@
   <title>GASTRORADWAN – Elektrorevize, Školení, Gastro vybavení</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, footer { background: #c80000; color: white; padding: 1rem 2rem; }
+    header nav a { color: white; margin-right: 1rem; text-decoration: none; }
+    header .logo { font-size: 1.5rem; font-weight: bold; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .hero { text-align: center; padding: 4rem 1rem 2rem; }
+    .hero h1 { font-size: 2rem; margin-bottom: 1rem; color: #c80000; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      background: #c80000;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .service-box {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 300px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .service-box i {
+      font-size: 2.2rem;
+      color: #c80000;
+      margin-bottom: 0.5rem;
+    }
+    .service-box h3 {
+      color: #c80000;
+      margin: 0.5rem 0;
+    }
+    .service-box p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .service-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #c80000;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>Hotová moderní stránka index.html s ikonami</p>
+
+<header>
+  <div class="container" style="display:flex; align-items:center; justify-content: space-between;">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html" class="active">Úvod</a>
+      <a href="onas.html">O nás</a>
+      <a href="elektrorevize.html">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>Spojujeme elektrotechniku a gastro vybavení</h1>
+    <p>Specialisté na elektrorevize, školení elektrotechniků a dodávky gastro zařízení.</p>
+    <div class="cta-buttons">
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="https://shop.gastroradwan.eu" target="_blank">E-shop</a>
+      <a href="elektrorevize.html">Revize a kontroly</a>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="service-box">
+      <i class="fas fa-bolt"></i>
+      <h3>Elektrorevize</h3>
+      <p>Výchozí a pravidelné revize el. zařízení, zásuvek a hromosvodů dle legislativy.</p>
+      <a href="elektrorevize.html">Více o revizích</a>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Školení elektrotechniků</h3>
+      <p>Příprava a zkoušky dle NV č. 194/2022 Sb. – §6 a §7.</p>
+      <a href="skoleni.html">Více o školení</a>
+    </div>
+    <div class="service-box">
+      <i class="fas fa-utensils"></i>
+      <h3>Gastro vybavení</h3>
+      <p>Profesionální vybavení kuchyní – e-shop s přímým napojením na dodavatele.</p>
+      <a href="https://shop.gastroradwan.eu" target="_blank">Navštivte e-shop</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
+  </div>
+</footer>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6806778cf3f498190c71e378/1ipck5vug';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>
