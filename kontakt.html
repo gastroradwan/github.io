@@ -83,7 +83,10 @@
     <label for="message">Zpráva:</label>
     <textarea id="message" name="message" rows="5" required></textarea>
 
-    <label><input type="checkbox" name="gdpr" required>Souhlasím se zpracováním osobních údajů</label>
+    <div style="margin-top: 1rem; display: flex; align-items: center;">
+      <input type="checkbox" id="gdpr" name="gdpr" required style="margin-right: 0.5rem;">
+      <label for="gdpr">Souhlasím se zpracováním osobních údajů</label>
+    </div>
 
     <button type="submit">Odeslat</button>
   </form>
