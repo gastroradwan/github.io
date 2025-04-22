@@ -3,71 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elektrorevize | GASTRORADWAN</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>GASTRORADWAN – Elektrorevize, Školení, Gastro vybavení</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <style>
-    .content {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem;
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, footer { background: #c80000; color: white; padding: 1rem 2rem; }
+    header .container, footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
-    h1, h2 {
+    header .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 1rem; color: #c80000; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      background: #c80000;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .service-box {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 300px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .service-box i {
+      font-size: 2.2rem;
       color: #c80000;
+      margin-bottom: 0.5rem;
     }
-    ul {
-      padding-left: 20px;
+    .service-box h3 {
+      color: #c80000;
+      margin: 0.5rem 0;
+    }
+    .service-box p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .service-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #c80000;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
 
-<header style="background: #c80000; color: white; height: 70px;">
-  <div class="container" style="max-width: 1100px; margin: 0 auto; height: 100%; display: flex; align-items: center; justify-content: space-between;">
-    <div class="logo" style="font-weight: bold; font-size: 1.5rem;">GASTRORADWAN</div>
-    <nav style="display: flex; gap: 1rem;">
-      <a href="index.html" style="color: white; text-decoration: none;">Úvod</a>
-      <a href="onas.html" style="color: white; text-decoration: none;">O nás</a>
-      <a href="elektrorevize.html" style="color: white; text-decoration: none;">Elektrorevize</a>
-      <a href="ezapp.html" style="color: white; text-decoration: none;">EZApp</a>
-      <a href="skoleni.html" style="color: white; text-decoration: none;">Školení</a>
-      <a href="kontakt.html" style="color: white; text-decoration: none;">Kontakt</a>
+<header>
+  <div class="container">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html" class="active">Úvod</a>
+      <a href="onas.html">O nás</a>
+      <a href="elektrorevize.html">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
   </div>
 </header>
-
-<main class="content">
-  <h1>Elektrorevize pro firmy, školy a domácnosti</h1>
-
-  <section>
-    <h2>Na co se specializujeme?</h2>
-    <ul>
-      <li>Výchozí a pravidelné revize elektroinstalací</li>
-      <li>Revize strojů a technologických celků</li>
-      <li>Revize zásuvkových okruhů a rozvaděčů</li>
-      <li>Revize hromosvodů a uzemnění</li>
-      <li>Revize spotřebičů a ručního nářadí</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Proč si vybrat nás?</h2>
-    <ul>
-      <li>✔️ Zkušenosti z průmyslu (TŽ, Siles Group…)</li>
-      <li>✔️ Revizní technici s osvědčením dle platné legislativy</li>
-      <li>✔️ Měření přístroji METREL Eurotest XC, protokoly v PDF</li>
-      <li>✔️ Možnost rychlého termínu</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Jak probíhá objednání?</h2>
-    <p>Stačí nás kontaktovat telefonicky nebo přes <a href="kontakt.html">kontaktní formulář</a>. Domluvíme si termín a způsob realizace.</p>
-  </section>
-</main>
-
-<footer>
+<h1>Elektrorevize pro firmy, &scaron;koly a dom&aacute;cnosti</h1>
+<section>
+<h2>Na co se specializujeme?</h2>
+<ul>
+<li>V&yacute;choz&iacute; a pravideln&eacute; revize elektroinstalac&iacute;</li>
+<li>Revize strojů a technologick&yacute;ch celků</li>
+<li>Revize z&aacute;suvkov&yacute;ch okruhů a rozvaděčů</li>
+<li>Revize hromosvodů a uzemněn&iacute;</li>
+<li>Revize spotřebičů a ručn&iacute;ho n&aacute;řad&iacute;</li>
+</ul>
+</section>
+<section>
+<h2>Proč si vybrat n&aacute;s?</h2>
+<ul>
+<li>✔️ Zku&scaron;enosti z průmyslu (TŽ, Siles Group&hellip;)</li>
+<li>✔️ Revizn&iacute; technici s osvědčen&iacute;m dle platn&eacute; legislativy</li>
+<li>✔️ Měřen&iacute; př&iacute;stroji METREL Eurotest XC, protokoly v PDF</li>
+<li>✔️ Možnost rychl&eacute;ho term&iacute;nu</li>
+</ul>
+</section>
+<section>
+<h2>Jak prob&iacute;h&aacute; objedn&aacute;n&iacute;?</h2>
+<p>Stač&iacute; n&aacute;s kontaktovat telefonicky nebo přes<span>&nbsp;</span><a href="https://www.gastroradwan.eu/kontakt.html">kontaktn&iacute; formul&aacute;ř</a>. Domluv&iacute;me si term&iacute;n a způsob realizace.</p>
+</section>
+  <footer>
   <div class="container">
-    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | <a href="mailto:info@gastroradwan.eu">info@gastroradwan.eu</a></p>
+    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
   </div>
 </footer>
 
@@ -75,7 +143,8 @@
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+var s1=document.createElement("script"),
+    s0=document.getElementsByTagName("script")[0];
 s1.async=true;
 s1.src='https://embed.tawk.to/6806778cf3f498190c71e378/1ipck5vug';
 s1.charset='UTF-8';
