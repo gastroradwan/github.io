@@ -41,6 +41,14 @@
       border: none;
       margin-top: 2rem;
     }
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .checkbox-wrapper input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -83,8 +91,8 @@
     <label for="message">Zpráva:</label>
     <textarea id="message" name="message" rows="5" required></textarea>
 
-    <div style="margin-top: 1rem; display: flex; align-items: center;">
-      <input type="checkbox" id="gdpr" name="gdpr" required style="margin-right: 0.5rem;">
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="gdpr" name="gdpr" required>
       <label for="gdpr">Souhlasím se zpracováním osobních údajů</label>
     </div>
 
