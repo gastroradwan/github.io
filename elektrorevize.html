@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektrorevize | GASTRORADWAN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, footer { background: #c80000; color: white; }
+    header .container, footer .container {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    main .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+    h1 { color: #c80000; margin-bottom: 1rem; }
+    h2 { color: #c80000; margin-top: 2rem; }
+    p { line-height: 1.6; margin-bottom: 1rem; }
+    ul li { margin-bottom: 0.5rem; }
+    footer p { margin: 0; font-size: 0.9rem; text-align: center; width: 100%; }
+    @media screen and (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      header .container { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
 
+<header>
+  <div class="container">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html">Úvod</a>
+      <a href="onas.html">O nás</a>
+      <a href="elektrorevize.html" class="active">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Elektrorevize</h1>
+    <p>Provádíme výchozí i pravidelné revize elektrických zařízení včetně kontrol hromosvodů, zásuvkových obvodů, strojů a elektroinstalací v bytových, průmyslových i komerčních objektech.</p>
+
+    <h2>Služby v oblasti revizí</h2>
+    <ul>
+      <li><i class="fas fa-plug"></i> Revize elektroinstalací (NN)</li>
+      <li><i class="fas fa-bolt"></i> Revize hromosvodů a uzemnění</li>
+      <li><i class="fas fa-tools"></i> Revize ručního elektrického nářadí a spotřebičů</li>
+      <li><i class="fas fa-industry"></i> Revize rozváděčů a technologických celků</li>
+      <li><i class="fas fa-file-alt"></i> Výstupní dokumentace dle platné legislativy</li>
+    </ul>
+
+    <h2>Proč si objednat revizi u nás?</h2>
+    <ul>
+      <li>✔️ Zkušenosti z průmyslových i domácích objektů</li>
+      <li>✔️ Moderní měřicí přístroje a foto dokumentace</li>
+      <li>✔️ Revizní zprávy v elektronické i tištěné podobě</li>
+    </ul>
+
+    <p>Na základě revize obdržíte platný revizní protokol, který může být vyžadován například při kolaudaci, pojištění, kontrolách od inspekce práce, nebo při evidenci zařízení dle vyhlášek a zákonů.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
+  </div>
+</footer>
+
+</body>
+</html>
