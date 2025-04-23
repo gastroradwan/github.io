@@ -1,1 +1,39 @@
-1234
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test §6 – E2A | GASTRORADWAN</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 2rem; background: #f9f9f9; }
+    h1 { color: #c80000; }
+    form { background: white; padding: 2rem; border-radius: 8px; max-width: 900px; margin: 0 auto; }
+    .question { margin-bottom: 1.5rem; }
+    .question p { margin-bottom: 0.5rem; font-weight: bold; }
+    label { display: block; margin-bottom: 0.25rem; cursor: pointer; }
+    button {
+      background: #c80000; color: white; border: none;
+      padding: 0.8rem 1.5rem; font-weight: bold; border-radius: 4px;
+      cursor: pointer; margin-top: 1rem;
+    }
+    #result { margin-top: 2rem; font-weight: bold; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <h1>Test odborné způsobilosti – §6 (E2A)</h1>
+  <form id="testForm">
+    <!-- Otázky budou zde dynamicky vloženy (v další fázi) -->
+    <p><em>Test s 40 otázkami bude připraven podle dokumentu TIČR...</em></p>
+    <button type="button" onclick="vyhodnot()">Vyhodnotit test</button>
+    <div id="result"></div>
+  </form>
+
+  <script>
+    function vyhodnot() {
+      const result = document.getElementById("result");
+      result.innerHTML = "Vyhodnocení zatím není dostupné. Otázky budou doplněny.";
+      result.style.color = "gray";
+    }
+  </script>
+</body>
+</html>
