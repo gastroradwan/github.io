@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O nás | GASTRORADWAN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    header, footer { background: #c80000; color: white; }
+    header .container, footer .container {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    main { flex: 1; padding: 2rem 1rem; }
+    main .container { max-width: 1100px; margin: 0 auto; }
+    h1, h2 { color: #c80000; margin-bottom: 1rem; }
+    ul { padding-left: 1rem; }
+    ul li { margin-bottom: 0.5rem; }
+    footer p { margin: 0; font-size: 0.9rem; text-align: center; width: 100%; }
+    @media screen and (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      header .container { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
 
+<header>
+  <div class="container">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html">Úvod</a>
+      <a href="onas.html" class="active">O nás</a>
+      <a href="elektrorevize.html">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="dokumenty.html">Dokumenty</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>O nás</h1>
+    <p><strong>GASTRORADWAN s.r.o.</strong> je česká společnost zaměřená na poskytování služeb v oblasti elektrorevizí, odborného školení elektrotechniků a dodávek profesionálního gastro vybavení.</p>
+
+    <h2>Naše hlavní oblasti činnosti:</h2>
+    <ul>
+      <li><i class="fas fa-bolt"></i> Revize elektrických zařízení NN, VN, VVN</li>
+      <li><i class="fas fa-poo-storm"></i> Revize hromosvodů a ochrany před bleskem</li>
+      <li><i class="fas fa-tools"></i> Kontroly a revize elektrospotřebičů a ručního nářadí</li>
+      <li><i class="fas fa-user-graduate"></i> Školení elektrotechniků dle NV č. 194/2022 Sb. (§6 a §7)</li>
+      <li><i class="fas fa-utensils"></i> Prodej a dodávky profesionálního gastro vybavení</li>
+    </ul>
+
+    <h2>Oprávnění a certifikace:</h2>
+    <p>Jsme držiteli oprávnění TIČR č. 5798/24/EZ-M,O,R,Z-E1A,E1B,E2A,E2B, s platností do 1. 10. 2034.<br>
+    <strong>Odpovědná osoba:</strong> Radek Wantulok</p>
+
+    <h2>Proč si vybrat právě nás?</h2>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Více než 10 let zkušeností v oboru elektro</li>
+      <li><i class="fas fa-cogs"></i> Moderní technologie, software EZApp, OCR načítání štítků</li>
+      <li><i class="fas fa-file-signature"></i> Elektronická dokumentace a online přístup</li>
+      <li><i class="fas fa-handshake"></i> Individuální přístup a rychlá komunikace</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
+  </div>
+</footer>
+
+</body>
+</html>
