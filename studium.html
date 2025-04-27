@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studijní materiály | GASTRORADWAN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    header, footer { background: #c80000; color: white; }
+    header .container, footer .container {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    main { flex: 1; padding: 2rem 1rem; }
+    main .container { max-width: 1100px; margin: 0 auto; }
+    h1, h2 { color: #c80000; margin-bottom: 1rem; }
+    ul { padding-left: 1rem; }
+    ul li { margin-bottom: 0.5rem; }
+    .info-box {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #856404;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #c80000;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #a00000;
+    }
+    footer p { margin: 0; font-size: 0.9rem; text-align: center; width: 100%; }
+    @media screen and (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      header .container { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    }
+  </style>
+</head>
 
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html">Úvod</a>
+      <a href="onas.html">O nás</a>
+      <a href="elektrorevize.html">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="dokumenty.html">Dokumenty</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Studijní materiály</h1>
+
+    <div class="info-box">
+      Přístup k podrobným studijním materiálům je dostupný pouze přihlášeným účastníkům školení.
+      Pokud ještě nemáte přístup, prosím kontaktujte správce systému.
+    </div>
+
+    <h2>Dostupné materiály:</h2>
+    <ul>
+      <li>📚 Přehled požadavků na odbornou způsobilost (§6 a §7)</li>
+      <li>⚡ Legislativa: zákon č. 250/2021 Sb., NV č. 194/2022 Sb., související předpisy</li>
+      <li>🔌 Technické normy (výběr k požadavkům na elektroinstalace a zařízení)</li>
+      <li>📝 Vzorové otázky pro přípravu na zkoušku</li>
+    </ul>
+
+    <p style="margin-top: 2rem;">
+      <a href="testy.html" class="btn">Zpět na testy</a>
+    </p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
+  </div>
+</footer>
+
+</body>
+</html>
