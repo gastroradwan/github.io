@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GASTRORADWAN – Elektrorevize, Školení, Gastro vybavení</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    header, footer { background: #c80000; color: white; }
+    header .container, footer .container {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 2rem 1rem; }
+    main .container { max-width: 1100px; margin: 0 auto; text-align: center; }
+    h1 { color: #c80000; margin-bottom: 2rem; }
+    .btn-group { margin: 1rem 0; }
+    .btn {
+      display: inline-block;
+      background: #c80000;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0.5rem;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .service-box {
+      flex: 1 1 250px;
+      background: #f8f8f8;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .service-box i {
+      font-size: 2rem;
+      color: #c80000;
+      margin-bottom: 1rem;
+    }
+    .service-box h3 {
+      color: #c80000;
+      margin-bottom: 0.5rem;
+    }
+    .service-box p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    footer p { margin: 0; font-size: 0.9rem; text-align: center; width: 100%; }
 
+    @media screen and (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; }
+      header .container { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .services { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html" class="active">Úvod</a>
+      <a href="onas.html">O nás</a>
+      <a href="elektrorevize.html">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="dokumenty.html">Dokumenty</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Spojujeme elektrotechniku a gastro vybavení</h1>
+    <p>Specialisté na elektrorevize, školení elektrotechniků a dodávky gastro zařízení.</p>
+
+    <div class="btn-group">
+      <a href="ezapp.html" class="btn">EZApp</a>
+      <a href="skoleni.html" class="btn">Školení</a>
+      <a href="dokumenty.html" class="btn">Dokumenty</a>
+      <a href="https://shop.gastroradwan.eu" class="btn" target="_blank">E-shop</a>
+    </div>
+
+    <div class="services">
+      <div class="service-box">
+        <i class="fas fa-bolt"></i>
+        <h3>Elektrorevize</h3>
+        <p>Výchozí a pravidelné revize el. zařízení, zásuvek a hromosvodů dle legislativy.</p>
+        <a href="elektrorevize.html" class="btn">Více o revizích</a>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Školení elektrotechniků</h3>
+        <p>Příprava a zkoušky dle NV č. 194/2022 – §6 a §7.</p>
+        <a href="skoleni.html" class="btn">Více o školení</a>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-utensils"></i>
+        <h3>Gastro vybavení</h3>
+        <p>Profesionální vybavení kuchyní – e-shop s přímým napojením na dodavatele.</p>
+        <a href="https://shop.gastroradwan.eu" class="btn" target="_blank">Navštívit e-shop</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
+  </div>
+</footer>
+
+</body>
+</html>
