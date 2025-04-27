@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Výběr testu | GASTRORADWAN</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #000; }
+    header, footer { background: #c80000; color: white; }
+    header .container, footer .container {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+      max-width: 1100px; margin: 0 auto; padding: 1rem;
+    }
+    .logo { font-size: 1.5rem; font-weight: bold; }
+    nav { display: flex; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    main .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+    h1, h2 { color: #c80000; }
+    .test-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .test-grid a {
+      flex: 1 1 calc(25% - 1rem);
+      background: #eee;
+      padding: 1rem;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: #c80000;
+      border-radius: 6px;
+    }
+    .test-grid a:hover { background: #ddd; }
+    .explanation {
+      background: #f9f9f9;
+      margin-top: 3rem;
+      padding: 2rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    footer p { margin: 0; font-size: 0.9rem; text-align: center; width: 100%; }
+
+    @media (max-width: 768px) {
+      .test-grid a { flex: 1 1 calc(50% - 1rem); }
+      nav { flex-direction: column; align-items: flex-start; }
+      header .container { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">GASTRORADWAN</div>
+    <nav>
+      <a href="index.html">Úvod</a>
+      <a href="onas.html">O nás</a>
+      <a href="elektrorevize.html">Elektrorevize</a>
+      <a href="ezapp.html">EZApp</a>
+      <a href="skoleni.html">Školení</a>
+      <a href="dokumenty.html">Dokumenty</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <h1>Zkušební testy | GASTRORADWAN</h1>
+
+    <h2>§6 – Elektrotechnik</h2>
+    <div class="test-grid">
+      <a href="test-e1a-par6.html">E1A</a>
+      <a href="test-e1b-par6.html">E1B</a>
+      <a href="test-e2a-par6.html">E2A</a>
+      <a href="test-e2b-par6.html">E2B</a>
+      <a href="test-e3a-par6.html">E3A</a>
+      <a href="test-e3b-par6.html">E3B</a>
+    </div>
+
+    <h2 style="margin-top: 2rem;">§7 – Vedoucí elektrotechnik</h2>
+    <div class="test-grid">
+      <a href="test-e1a-par7.html">E1A</a>
+      <a href="test-e1b-par7.html">E1B</a>
+      <a href="test-e2a-par7.html">E2A</a>
+      <a href="test-e2b-par7.html">E2B</a>
+      <a href="test-e3a-par7.html">E3A</a>
+      <a href="test-e3b-par7.html">E3B</a>
+    </div>
+
+    <h2 style="margin-top: 2rem;">Revizní technik</h2>
+    <div class="test-grid">
+      <a href="test-e1-rt.html">E1</a>
+      <a href="test-e2-rt.html">E2</a>
+      <a href="test-e3-rt.html">E3</a>
+    </div>
+
+    <div class="explanation">
+      <h2>Vysvětlení rozsahů odborné způsobilosti:</h2>
+      <ul>
+        <li><strong>E1A</strong> – Zařízení bez omezení napětí střídavého/stejnosměrného v prostředí bez nebezpečí výbuchu.</li>
+        <li><strong>E1B</strong> – Zařízení bez omezení napětí střídavého/stejnosměrného v prostředí s nebezpečím výbuchu.</li>
+        <li><strong>E2A</strong> – Zařízení s napětím do 1 kV střídavého nebo 1,5 kV stejnosměrného v prostředí bez nebezpečí výbuchu.</li>
+        <li><strong>E2B</strong> – Zařízení s napětím do 1 kV střídavého nebo 1,5 kV stejnosměrného v prostředí s nebezpečím výbuchu.</li>
+        <li><strong>E3A</strong> – Ochrana před účinky atmosférické a statické elektřiny v prostředí bez nebezpečí výbuchu.</li>
+        <li><strong>E3B</strong> – Ochrana před účinky atmosférické a statické elektřiny v prostředí s nebezpečím výbuchu.</li>
+      </ul>
+      <p><em>Testy jsou připraveny dle aktuální legislativy (NV č. 194/2022 Sb.).</em></p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 GASTRORADWAN s.r.o. | Školení odborné způsobilosti dle NV 194/2022 Sb.</p>
+  </div>
+</footer>
+
+</body>
+</html>
