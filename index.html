@@ -1,88 +1,143 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GASTRORADWAN – Elektrorevize, Školení, Gastro vybavení</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GASTRORADWAN | Revize, Školení, E-shop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+    .hero {
+      background-color: #b30000;
+      color: white;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      background-color: white;
+      color: #b30000;
+      border: 2px solid white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #fff3f3;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .services, .why, .kontakt {
+      background-color: #f9f9f9;
+      padding: 2rem 1rem;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .service {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    h2 {
+      text-align: center;
+      color: #b30000;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    @media screen and (max-width: 600px) {
+      .btn {
+        display: block;
+        margin: 1rem auto;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header class="top-bar">
-  <div class="container">
-    <div class="logo">GASTRORADWAN</div>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Úvod</a>
-      <a href="onas.html">O nás</a>
-      <a href="elektrorevize.html">Elektrorevize</a>
-      <a href="ezapp.html">EZApp</a>
-      <a href="skoleni.html">Školení</a>
-      <a href="dokumenty.html">Dokumenty</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <div class="container">
-    <h1>Spojujeme elektrotechniku a gastro vybavení</h1>
-    <p>Specialisté na elektrorevize, školení elektrotechniků a dodávky gastro zařízení.</p>
-
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
-      <a href="ezapp.html" class="btn"><i class="fas fa-tools"></i> EZApp</a>
-      <a href="skoleni.html" class="btn"><i class="fas fa-user-graduate"></i> Školení</a>
-      <a href="dokumenty.html" class="btn"><i class="fas fa-file-alt"></i> Dokumenty</a>
-      <a href="https://shop.gastroradwan.eu" class="btn" target="_blank"><i class="fas fa-store"></i> E-shop</a>
+  <header class="hero">
+    <div class="container">
+      <h1>GASTRORADWAN s.r.o.</h1>
+      <p>Revize | Školení | E-shop s gastro a elektro vybavením</p>
+      <div class="buttons">
+        <a href="#revize" class="btn">Objednat revizi</a>
+        <a href="/testy/skoleni.html" class="btn">Přihlásit se na školení</a>
+        <a href="https://shop.gastroradwan.eu" class="btn">Navštívit e-shop</a>
+      </div>
     </div>
+  </header>
 
-    <section style="margin-top: 3rem;">
-      <h2>Naše hlavní služby</h2>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
-        <div style="flex: 1 1 300px; text-align: center;">
-          <i class="fas fa-bolt fa-2x" style="color:#c80000;"></i>
-          <h3>Elektrorevize</h3>
-          <p>Výchozí a pravidelné revize elektrických zařízení, zásuvek a hromosvodů dle legislativy.</p>
-          <a href="elektrorevize.html" class="btn">Více o revizích</a>
+  <section class="services">
+    <div class="container">
+      <h2>Naše služby</h2>
+      <div class="service-grid">
+        <div class="service">
+          <h3>🧰 Revize a audity</h3>
+          <p>Revize elektro, BOZP, audity dle NV 190/2022 Sb., TIČR, ISO. Kompletní zprávy a fotodokumentace.</p>
         </div>
-
-        <div style="flex: 1 1 300px; text-align: center;">
-          <i class="fas fa-user-cog fa-2x" style="color:#c80000;"></i>
-          <h3>Školení elektrotechniků</h3>
-          <p>Příprava a zkoušky odborné způsobilosti dle NV č. 194/2022 Sb. – §6 a §7.</p>
-          <a href="skoleni.html" class="btn">Více o školení</a>
+        <div class="service">
+          <h3>🎓 Školení a zkoušky</h3>
+          <p>Školení elektrotechniků §6, §7, NN/VN, prostředí s výbuchem. Online testy a přihlášky.</p>
         </div>
-
-        <div style="flex: 1 1 300px; text-align: center;">
-          <i class="fas fa-utensils fa-2x" style="color:#c80000;"></i>
-          <h3>Gastro vybavení</h3>
-          <p>Profesionální vybavení kuchyní – přímé napojení na dodavatele.</p>
-          <a href="https://shop.gastroradwan.eu" class="btn" target="_blank">Navštivte e-shop</a>
+        <div class="service">
+          <h3>🍽️ Gastro & pneu eshop</h3>
+          <p>Dodávky gastro vybavení (Stalgast, Tomgast) a pneumatik (TirexTyre). Online objednávky nonstop.</p>
         </div>
       </div>
-    </section>
-  </div>
-</main>
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    <p>© 2025 GASTRORADWAN s.r.o. | Ostravská 262, Český Těšín | info@gastroradwan.eu</p>
-  </div>
-</footer>
+  <section class="why">
+    <div class="container">
+      <h2>Proč si vybrat nás</h2>
+      <ul>
+        <li>✅ 25 let zkušeností</li>
+        <li>✅ Certifikovaní revizní technici</li>
+        <li>✅ Komplexní služby: revize, školení, eshop</li>
+        <li>✅ Výstupy pro TIČR, ISO, BOZP audity</li>
+      </ul>
+    </div>
+  </section>
 
-<!-- Tawk.to live chat -->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6806778cf3f498190c71e378/1ipck5vug';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+  <section class="kontakt" id="kontakt">
+    <div class="container">
+      <h2>Kontaktujte nás</h2>
+      <p><strong>📞 Telefon:</strong> <a href="tel:+420604152218">+420 604 152 218</a></p>
+      <p><strong>📩 E-mail:</strong> <a href="mailto:info@gastroradwan.eu">info@gastroradwan.eu</a></p>
+      <p><strong>📍 Adresa:</strong> Ostravská 262, Český Těšín – Mosty</p>
+    </div>
+  </section>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 GASTRORADWAN s.r.o. | Revize – Školení – E-shop</p>
+    </div>
+  </footer>
 </body>
 </html>
