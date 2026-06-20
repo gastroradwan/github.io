@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="title desc">
+  <title id="title">GASTRORADWAN logo</title>
+  <desc id="desc">Logo GASTRORADWAN s.r.o. se symbolem GR v šestihranu a sloganem Komplexní elektro bezpečnost pro firmy a průmysl.</desc>
+  <defs>
+    <style>
+      .blue{fill:#0A2342}.orange{fill:#F28C28}.light{fill:#ffffff}.muted{fill:#6B7A8C}.stroke-blue{stroke:#0A2342}.stroke-orange{stroke:#F28C28}
+    </style>
+  </defs>
+  <g transform="translate(8 10)">
+    <polygon points="80,0 149.3,40 149.3,120 80,160 10.7,120 10.7,40" fill="#ffffff" stroke="#0A2342" stroke-width="8"/>
+    <polyline points="128,34 80,18 32,46 32,114 80,142 128,114" fill="none" stroke="#F28C28" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="blue" d="M41 55c0-11 9-20 20-20h53v20H64c-3 0-5 2-5 5v40c0 3 2 5 5 5h31V88H74V70h42v55H61c-11 0-20-9-20-20V55z"/>
+    <path class="orange" d="M91 55h42c13 0 23 10 23 23 0 10-6 18-15 21l17 26h-27l-14-23h-3v23H91V55zm23 19v12h17c3 0 6-3 6-6s-3-6-6-6h-17z"/>
+  </g>
+  <g transform="translate(190 52)">
+    <text x="0" y="42" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="900" letter-spacing="1">
+      <tspan class="blue">GASTRO</tspan><tspan class="orange">RADWAN</tspan>
+    </text>
+    <rect x="2" y="58" width="382" height="5" rx="2.5" class="orange"/>
+    <text x="0" y="96" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" class="muted">Komplexní elektro bezpečnost pro firmy a průmysl</text>
+  </g>
+</svg>
