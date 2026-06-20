@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GASTRORADWAN s.r.o. | Komplexní elektro bezpečnost pro firmy</title>
+  <meta name="description" content="Revize jsou jen začátek. GASTRORADWAN pomáhá firmám zajistit elektro bezpečnost, revize, školení, dokumentaci, harmonogramy a přípravu na kontroly OIP a TIČR." />
+  <style>
+    :root {
+      --navy: #06172d;
+      --navy-2: #092546;
+      --blue: #0f65c9;
+      --orange: #ff8a00;
+      --orange-2: #ffb000;
+      --green: #15803d;
+      --white: #ffffff;
+      --muted: #d9e4f2;
+      --text: #0d1b2f;
+      --soft: #f4f7fb;
+      --border: #dce5f1;
+      --shadow: 0 18px 45px rgba(5, 20, 45, .22);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(6, 23, 45, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 76px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+      clip-path: polygon(22% 0, 100% 0, 100% 72%, 72% 100%, 0 100%, 0 22%);
+    }
+    .brand small { display: block; font-size: 11px; color: var(--muted); letter-spacing: 1.8px; margin-top: -5px; }
+    nav ul { display: flex; align-items: center; gap: 22px; list-style: none; padding: 0; margin: 0; color: #fff; font-size: 14px; font-weight: 700; }
+    nav a { opacity: .9; }
+    nav a:hover { color: var(--orange-2); opacity: 1; }
+    .top-phone { color: #fff; font-weight: 800; font-size: 14px; white-space: nowrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 8px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: .2s ease;
+      cursor: pointer;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--orange-2), var(--orange)); color: #071426; box-shadow: 0 12px 24px rgba(255,138,0,.25); }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-secondary { color: #fff; border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.08); }
+    .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,.14); }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(6, 23, 45, .97) 0%, rgba(6, 23, 45, .92) 42%, rgba(6, 23, 45, .35) 100%),
+        url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1800&q=80') center/cover;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 118px;
+      background: linear-gradient(0deg, rgba(6,23,45,.94), rgba(6,23,45,0));
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 40px; position: relative; z-index: 2; }
+    .eyebrow { color: var(--orange-2); font-weight: 900; letter-spacing: 2.4px; text-transform: uppercase; font-size: 13px; margin-bottom: 14px; }
+    h1 { font-size: clamp(42px, 6vw, 76px); line-height: .98; margin: 0 0 22px; letter-spacing: -1.8px; }
+    h1 span { color: var(--orange-2); display: block; }
+    .lead { font-size: 20px; max-width: 650px; color: #e8f1fb; margin: 0 0 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 12px; color: #fff; }
+    .hero-pills span { padding: 9px 14px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.08); font-weight: 700; font-size: 13px; }
+    .trust-card {
+      align-self: end;
+      justify-self: end;
+      width: min(430px, 100%);
+      background: rgba(6,23,45,.82);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    .trust-card h3 { margin: 0 0 18px; font-size: 22px; }
+    .trust-list { display: grid; gap: 14px; }
+    .trust-item { display: flex; gap: 12px; align-items: flex-start; color: #eaf2fd; }
+    .trust-icon { width: 34px; height: 34px; flex: 0 0 34px; border-radius: 10px; display: grid; place-items: center; background: rgba(255,138,0,.18); color: var(--orange-2); font-weight: 900; }
+
+    .value-strip { background: var(--navy); color: #fff; border-top: 1px solid rgba(255,255,255,.1); border-bottom: 1px solid rgba(255,255,255,.1); }
+    .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,.12); }
+    .value { background: var(--navy); padding: 24px 20px; display: flex; gap: 14px; align-items: center; }
+    .value strong { display: block; color: #fff; font-size: 15px; }
+    .value span { display: block; color: var(--muted); font-size: 13px; }
+    .value .ico { color: var(--orange-2); font-size: 28px; }
+
+    section { padding: 80px 0; }
+    .section-head { text-align: center; margin-bottom: 42px; }
+    .section-head .eyebrow { margin-bottom: 8px; }
+    h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.1; margin: 0; letter-spacing: -.8px; }
+    .section-head p { max-width: 760px; margin: 16px auto 0; color: #49627f; font-size: 18px; }
+
+    .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .service-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 12px 28px rgba(10, 35, 70, .07);
+      min-height: 205px;
+      transition: .2s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 18px 35px rgba(10, 35, 70, .12); border-color: rgba(15,101,201,.35); }
+    .service-icon { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; font-size: 28px; background: #eef6ff; color: var(--blue); margin-bottom: 18px; }
+    .service-card:nth-child(2n) .service-icon { background: #fff4e1; color: var(--orange); }
+    .service-card h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.2; }
+    .service-card p { margin: 0; color: #4f6682; font-size: 14px; }
+
+    .dark-block { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: #fff; position: relative; overflow: hidden; }
+    .dark-block::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(255,138,0,.18), transparent 32%), radial-gradient(circle at 10% 80%, rgba(15,101,201,.22), transparent 34%); pointer-events: none; }
+    .split { display: grid; grid-template-columns: .92fr 1.08fr; gap: 44px; align-items: center; position: relative; z-index: 1; }
+    .split p { color: #dce8f6; font-size: 18px; }
+    .check-list { display: grid; gap: 12px; margin: 26px 0 0; padding: 0; list-style: none; }
+    .check-list li { display: flex; gap: 12px; align-items: flex-start; color: #eef6ff; }
+    .check-list li::before { content: '✓'; display: grid; place-items: center; width: 24px; height: 24px; flex: 0 0 24px; border-radius: 999px; background: var(--green); color: #fff; font-weight: 900; font-size: 14px; margin-top: 2px; }
+    .doc-panel { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); border-radius: 24px; padding: 32px; box-shadow: var(--shadow); }
+    .doc-panel h3 { font-size: 28px; margin: 0 0 16px; color: #fff; }
+
+    .ezapp { background: var(--soft); }
+    .app-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 24px 55px rgba(10, 35, 70, .12);
+    }
+    .app-visual {
+      position: relative;
+      min-height: 330px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #0b2340, #0f65c9);
+      overflow: hidden;
+      padding: 28px;
+      color: #fff;
+    }
+    .dashboard {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+      color: var(--text);
+      box-shadow: 0 18px 35px rgba(0,0,0,.22);
+      transform: rotate(-2deg);
+      width: 92%;
+      margin: 12px auto;
+    }
+    .dash-top { height: 12px; width: 130px; background: #d8e5f6; border-radius: 99px; margin-bottom: 18px; }
+    .dash-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+    .dash-box { height: 58px; background: #eef4fb; border-radius: 12px; border-left: 5px solid var(--blue); }
+    .dash-row { height: 11px; background: #e5edf7; border-radius: 99px; margin: 10px 0; }
+    .phone { position: absolute; right: 22px; bottom: 20px; width: 120px; height: 210px; border-radius: 22px; background: #fff; box-shadow: 0 18px 30px rgba(0,0,0,.28); padding: 13px; transform: rotate(4deg); }
+    .phone div { height: 16px; margin: 8px 0; border-radius: 99px; background: #dfe9f6; }
+    .phone div:nth-child(2) { background: #b6dbff; }
+    .phone div:nth-child(4) { background: #ffd18d; }
+
+    .segments { padding: 42px 0; background: #fff; }
+    .segment-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .segment { min-height: 118px; border-radius: 16px; overflow: hidden; position: relative; background: var(--navy); color: #fff; display: flex; align-items: flex-end; padding: 16px; font-weight: 900; font-size: 13px; text-transform: uppercase; box-shadow: inset 0 -80px 80px rgba(0,0,0,.45); }
+    .segment:nth-child(1) { background: linear-gradient(135deg, #10233d, #a15900); }
+    .segment:nth-child(2) { background: linear-gradient(135deg, #10233d, #165b42); }
+    .segment:nth-child(3) { background: linear-gradient(135deg, #10233d, #6b4b18); }
+    .segment:nth-child(4) { background: linear-gradient(135deg, #10233d, #1b5f99); }
+    .segment:nth-child(5) { background: linear-gradient(135deg, #10233d, #7b310d); }
+    .segment:nth-child(6) { background: linear-gradient(135deg, #10233d, #4b5970); }
+
+    .cta { background: linear-gradient(135deg, #f7fbff, #eaf2fb); }
+    .cta-box { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; background: #fff; border-radius: 28px; padding: 42px; box-shadow: 0 22px 55px rgba(10, 35, 70, .12); border: 1px solid var(--border); }
+    form { display: grid; gap: 12px; }
+    input, select, textarea { width: 100%; padding: 14px 14px; border: 1px solid #cdd9e8; border-radius: 10px; font: inherit; }
+    textarea { min-height: 118px; resize: vertical; }
+    .form-note { font-size: 13px; color: #5d7088; margin-top: 8px; }
+
+    footer { background: #06172d; color: #fff; padding: 48px 0 26px; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    footer p, footer li { color: #cbd9ea; font-size: 14px; }
+    footer h4 { margin: 0 0 12px; color: #fff; }
+    footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+    .copyright { color: #91a6bf; font-size: 13px; margin-top: 22px; }
+
+    @media (max-width: 1020px) {
+      nav ul, .top-phone { display: none; }
+      .hero-grid, .split, .app-card, .cta-box { grid-template-columns: 1fr; }
+      .trust-card { justify-self: start; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .values { grid-template-columns: repeat(2, 1fr); }
+      .segment-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .container { width: min(100% - 28px, 1180px); }
+      .hero { min-height: auto; padding: 68px 0; }
+      .services, .values, .segment-grid, .footer-grid { grid-template-columns: 1fr; }
+      .app-card, .cta-box { padding: 26px; }
+      .brand strong { font-size: 16px; }
+      .hero-actions { display: grid; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="GASTRORADWAN úvod">
+        <span class="brand-mark">GR</span>
+        <span><strong>GASTRORADWAN</strong><small>s.r.o.</small></span>
+      </a>
+      <nav aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#dokumentace">Dokumentace</a></li>
+          <li><a href="#ezapp">EZApp</a></li>
+          <li><a href="#poptavka">Poptávka</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      <span class="top-phone">+420 774 404 774</span>
+      <a class="btn btn-primary" href="#poptavka">Poptat službu</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Komplexní elektro bezpečnost pro firmy</div>
+          <h1>Revize jsou jen začátek. <span>Zajistíme elektro bezpečnost podniku.</span></h1>
+          <p class="lead">Od revizí přes dokumentaci, školení a harmonogramy až po přípravu na kontroly OIP, TIČR, pojišťoven a auditů.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#poptavka">Poptat službu</a>
+            <a class="btn btn-secondary" href="tel:+420774404774">Zavolat nám</a>
+          </div>
+          <div class="hero-pills" aria-label="Hlavní oblasti služeb">
+            <span>Revize</span><span>Školení</span><span>Dokumentace</span><span>Harmonogramy</span><span>OIP</span><span>TIČR</span>
+          </div>
+        </div>
+        <aside class="trust-card" aria-label="Důležité výhody">
+          <h3>Bezpečnost • Kvalita • Jistota</h3>
+          <div class="trust-list">
+            <div class="trust-item"><span class="trust-icon">✓</span><span><strong>Od roku 2006</strong><br>Technické služby, elektro bezpečnost a praxe z provozů.</span></div>
+            <div class="trust-item"><span class="trust-icon">⚡</span><span><strong>Pro průmysl a firmy</strong><br>Revize, dokumentace, školení a evidence na jednom místě.</span></div>
+            <div class="trust-item"><span class="trust-icon">📋</span><span><strong>Připraveno na kontroly</strong><br>Pomáháme s podklady pro OIP, TIČR, pojišťovny a audity.</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="value-strip">
+      <div class="container values">
+        <div class="value"><span class="ico">🛡️</span><div><strong>Bezpečnost</strong><span>lidí, zařízení a provozu</span></div></div>
+        <div class="value"><span class="ico">✅</span><div><strong>Splnění povinností</strong><span>revize, školení, dokumentace</span></div></div>
+        <div class="value"><span class="ico">⏱️</span><div><strong>Úspora času</strong><span>přehled, plánování a evidence</span></div></div>
+        <div class="value"><span class="ico">📑</span><div><strong>Jistota při kontrolách</strong><span>OIP, TIČR, audity, pojišťovny</span></div></div>
+      </div>
+    </div>
+
+    <section id="sluzby">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Naše služby</div>
+          <h2>Elektro bezpečnost podniku pod jednou střechou</h2>
+          <p>Neřešíme pouze jednotlivou revizi. Pomáháme nastavit systém, ve kterém má firma přehled o povinnostech, termínech, dokumentaci a technickém stavu zařízení.</p>
+        </div>
+        <div class="services">
+          <article class="service-card"><div class="service-icon">⚡</div><h3>Revize elektrických zařízení</h3><p>Pravidelné a výchozí revize elektrických zařízení do 1000 V i nad 1000 V.</p></article>
+          <article class="service-card"><div class="service-icon">⚙️</div><h3>Revize strojů a technologií</h3><p>Kontroly a revize strojních zařízení dle příslušných norem a technických požadavků.</p></article>
+          <article class="service-card"><div class="service-icon">🛡️</div><h3>Hromosvody a uzemnění</h3><p>Revize LPS, uzemnění, pospojování, měření zemních odporů a související protokoly.</p></article>
+          <article class="service-card"><div class="service-icon">🔌</div><h3>Kontroly spotřebičů</h3><p>Evidence a pravidelné kontroly spotřebičů, nářadí a prodlužovacích přívodů.</p></article>
+          <article class="service-card"><div class="service-icon">🎓</div><h3>Školení NV 194/2022 Sb.</h3><p>Školení elektrotechniků, poučených osob a zaměstnanců dle aktuálních požadavků.</p></article>
+          <article class="service-card"><div class="service-icon">📋</div><h3>Dokumentace a schémata</h3><p>Jednopólová schémata, průvodní dokumentace, protokoly a podklady k provozu.</p></article>
+          <article class="service-card"><div class="service-icon">📅</div><h3>Harmonogramy revizí</h3><p>Plánování termínů, evidence zařízení a kontrola návaznosti revizí a kontrol.</p></article>
+          <article class="service-card"><div class="service-icon">🏢</div><h3>OIP / TIČR příprava</h3><p>Pomoc s přípravou dokumentace a podkladů pro kontroly, audity a pojišťovny.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-block" id="dokumentace">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Dokumentace a správa provozu</div>
+          <h2>Revizní zpráva sama o sobě nestačí.</h2>
+          <p>Firma potřebuje mít pod kontrolou provozní dokumentaci, pracovní postupy, evidenci zařízení, termíny revizí a návaznost na skutečný stav provozu.</p>
+          <ul class="check-list">
+            <li>Bezpečnost lidí, zařízení a provozu.</li>
+            <li>Přehled povinností vůči legislativě, OIP a TIČR.</li>
+            <li>Lepší připravenost na audity, pojišťovny a interní kontroly.</li>
+          </ul>
+        </div>
+        <div class="doc-panel">
+          <h3>Aktualizace a správa provozní dokumentace</h3>
+          <ul class="check-list">
+            <li>Provozní bezpečnostní předpisy.</li>
+            <li>Místní provozní bezpečnostní předpisy.</li>
+            <li>Pracovní postupy a PPO.</li>
+            <li>Dokumentace vyhrazených technických zařízení.</li>
+            <li>Evidence elektrických zařízení.</li>
+            <li>Harmonogramy revizí a kontrol.</li>
+            <li>Dokumentace pro ISO systémy.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="ezapp" id="ezapp">
+      <div class="container app-card">
+        <div>
+          <div class="eyebrow">Připravujeme</div>
+          <h2>EZApp – digitální systém pro správu revizí a dokumentace</h2>
+          <p>EZApp bude zákaznický portál GASTRORADWAN pro přehled provozů, zařízení, dokumentů, revizí a termínů.</p>
+          <ul class="check-list" style="--green:#0f65c9; color:#0d1b2f;">
+            <li style="color:#0d1b2f;">Všechny revize a dokumenty na jednom místě.</li>
+            <li style="color:#0d1b2f;">Automatické hlídání termínů.</li>
+            <li style="color:#0d1b2f;">Okamžitý přístup z webu i mobilu.</li>
+            <li style="color:#0d1b2f;">Sdílení dokumentace se zákazníky.</li>
+          </ul>
+        </div>
+        <div class="app-visual" aria-label="Ilustrační náhled EZApp">
+          <strong>EZApp Dashboard</strong>
+          <div class="dashboard">
+            <div class="dash-top"></div>
+            <div class="dash-grid"><div class="dash-box"></div><div class="dash-box"></div><div class="dash-box"></div></div>
+            <div class="dash-row" style="width: 88%"></div>
+            <div class="dash-row" style="width: 76%"></div>
+            <div class="dash-row" style="width: 94%"></div>
+            <div class="dash-row" style="width: 63%"></div>
+          </div>
+          <div class="phone"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="segments" aria-label="Oblasti působení">
+      <div class="container segment-grid">
+        <div class="segment">Výroba a průmysl</div>
+        <div class="segment">Potravinářství</div>
+        <div class="segment">Sklady a logistika</div>
+        <div class="segment">Energetika</div>
+        <div class="segment">Automotive</div>
+        <div class="segment">Obchod a služby</div>
+      </div>
+    </section>
+
+    <section class="cta" id="poptavka">
+      <div class="container cta-box">
+        <div>
+          <div class="eyebrow">Nezávazná poptávka</div>
+          <h2>Potřebujete poradit, co má mít firma v pořádku?</h2>
+          <p>Napište, co řešíte. Poptávka je bez registrace. Po odeslání požadavku navrhneme další postup.</p>
+          <p><strong>Typické požadavky:</strong> revize, školení, dokumentace, harmonogramy, příprava na OIP/TIČR, evidence zařízení, dlouhodobá správa.</p>
+        </div>
+        <form action="mailto:info@gastroradwan.eu" method="post" enctype="text/plain">
+          <input name="jmeno" placeholder="Jméno a příjmení" required>
+          <input name="firma" placeholder="Firma / IČO">
+          <input name="email" type="email" placeholder="E-mail" required>
+          <input name="telefon" placeholder="Telefon">
+          <select name="typ_sluzby">
+            <option>Co potřebujete řešit?</option>
+            <option>Revize elektro</option>
+            <option>Revize strojů nebo technologie</option>
+            <option>Hromosvody / uzemnění</option>
+            <option>Kontroly spotřebičů</option>
+            <option>Školení NV 194/2022 Sb.</option>
+            <option>Dokumentace / schémata / PPO</option>
+            <option>Harmonogram revizí</option>
+            <option>Příprava na OIP / TIČR</option>
+            <option>Nevím přesně – potřebuji poradit</option>
+          </select>
+          <textarea name="zprava" placeholder="Popište stručně požadavek"></textarea>
+          <button class="btn btn-primary" type="submit">Odeslat poptávku</button>
+          <div class="form-note">Poznámka: v první verzi formulář otevře e-mail. Později bude napojen přímo na EZApp.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#top" class="brand"><span class="brand-mark">GR</span><span><strong>GASTRORADWAN</strong><small>s.r.o.</small></span></a>
+          <p>Komplexní správa elektro bezpečnosti firem, revize, školení, dokumentace a moderní systém EZApp.</p>
+        </div>
+        <div>
+          <h4>Kontakt</h4>
+          <ul>
+            <li>+420 774 404 774</li>
+            <li>info@gastroradwan.eu</li>
+            <li>www.gastroradwan.eu</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Adresa</h4>
+          <ul>
+            <li>GASTRORADWAN s.r.o.</li>
+            <li>Ostravská 262</li>
+            <li>735 62 Český Těšín – Mosty</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Služby</h4>
+          <ul>
+            <li>Revize elektro</li>
+            <li>Školení NV 194/2022 Sb.</li>
+            <li>Dokumentace</li>
+            <li>Harmonogramy revizí</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">© 2026 GASTRORADWAN s.r.o. | Verze homepage 1.0 – pracovní návrh.</div>
+    </div>
+  </footer>
+</body>
+</html>
