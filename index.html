@@ -54,13 +54,13 @@
     <section class="dark-section" id="ezapp">
       <div class="container split">
         <div><p class="eyebrow">Připravujeme</p><h2>EZApp – zákaznický portál</h2><p>Veřejný web je pro všechny. EZApp bude pouze pro registrované zákazníky a techniky: provozy, zařízení, revize, dokumenty, harmonogramy a stav zakázek.</p></div>
-        <div class="dark-panel"><h3>Veřejné vs. registrované</h3><ul class="checklist"><li>Web: služby, kontakt, poptávka bez registrace.</li><li>EZApp: data zákazníků až po přihlášení.</li><li>Budoucí napojení poptávky na databázi.</li></ul></div>
+        <div class="dark-panel"><h3>Veřejné vs. registrované</h3><ul class="checklist"><li>Web: služby, kontakt, poptávka bez registrace.</li><li>EZApp: data zákazníků až po přihlášení.</li><li>Budoucí napojení poptávky na databázi.</li><li>Virtuální asistent vyhodnotí poptávku, přílohy a navrhne další postup.</li></ul></div>
       </div>
     </section>
 
     <section class="cta" id="poptavka">
       <div class="container cta-box">
-        <div><p class="eyebrow">Nezávazná poptávka</p><h2>Napište, co potřebujete řešit.</h2><p>Formulář je veřejný a bez registrace. V další etapě bude napojen přímo na EZApp.</p></div>
+        <div><p class="eyebrow">Nezávazná poptávka</p><h2>Napište, co potřebujete řešit.</h2><p>Formulář je veřejný a bez registrace. V další etapě bude napojen přímo na EZApp, kde virtuální asistent zkontroluje popis, e-mail a vložené soubory a navrhne další postup.</p></div>
         <form class="contact-form" action="mailto:info@gastroradwan.eu" method="post" enctype="text/plain">
           <input name="jmeno" placeholder="Jméno a příjmení" required>
           <input name="firma" placeholder="Firma / IČO">
@@ -68,6 +68,9 @@
           <input name="telefon" placeholder="Telefon">
           <select name="sluzba"><option>Vyberte službu</option><option>Revize elektro NN / VN / VVN / Ex</option><option>Hromosvody</option><option>Stroje / technologie</option><option>Školení</option><option>Dokumentace</option><option>Harmonogram revizí</option><option>Nevím přesně – potřebuji poradit</option></select>
           <textarea name="zprava" placeholder="Popis požadavku"></textarea>
+          <label class="file-label">Příloha pro posouzení <span>projekt, fotografie, předchozí revize, dokumentace</span></label>
+          <input name="priloha" type="file" disabled>
+          <p class="form-note">Nahrání souborů bude aktivní po napojení formuláře na EZApp. V této pracovní verzi pošlete přílohy e-mailem na info@gastroradwan.eu.</p>
           <button class="button primary" type="submit">Odeslat poptávku</button>
         </form>
       </div>
