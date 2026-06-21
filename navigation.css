@@ -1,6 +1,9 @@
 .site-header .logo-link:after{display:none!important}
-.main-nav{align-items:center;gap:24px}
+.main-nav{align-items:center;gap:22px}
 .main-nav a{display:none}
+.main-nav a[href="index.html"],
+.main-nav a[href="#uvod"],
+.main-nav a[href="/"],
 .main-nav a[href="sluzby.html"],
 .main-nav a[href="sprava-elektro-bezpecnosti.html"],
 .main-nav a[href="garant-elektro.html"],
