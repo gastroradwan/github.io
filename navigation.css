@@ -1,0 +1,19 @@
+.site-header .logo-link:after{display:none!important}
+.main-nav{align-items:center;gap:24px}
+.main-nav a{display:none}
+.main-nav a[href="sluzby.html"],
+.main-nav a[href="sprava-elektro-bezpecnosti.html"],
+.main-nav a[href="garant-elektro.html"],
+.main-nav a[href="ezapp.html"],
+.main-nav a[href="kontakt.html"]{display:inline-flex}
+.header-button{white-space:nowrap;min-width:122px}
+
+@media(max-width:1100px){
+  .nav{justify-content:space-between}
+  .main-nav{justify-content:center;padding-left:0}
+}
+
+@media(max-width:760px){
+  .nav{justify-content:flex-start}
+  .main-nav{justify-content:flex-start}
+}
