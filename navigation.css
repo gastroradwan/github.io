@@ -1,5 +1,5 @@
 .site-header .logo-link:after{display:none!important}
-.main-nav{align-items:center;gap:22px}
+.main-nav{align-items:center;gap:18px}
 .main-nav a{display:none}
 .main-nav a[href="index.html"],
 .main-nav a[href="#uvod"],
@@ -8,7 +8,10 @@
 .main-nav a[href="sprava-elektro-bezpecnosti.html"],
 .main-nav a[href="garant-elektro.html"],
 .main-nav a[href="ezapp.html"],
+.main-nav a[href="prihlaseni.html"],
 .main-nav a[href="kontakt.html"]{display:inline-flex}
+.main-nav a[href="prihlaseni.html"]{padding:8px 12px;border:1px solid rgba(255,176,0,.5);border-radius:999px;color:#ffb000}
+.main-nav a[href="prihlaseni.html"]:hover,.main-nav a[href="prihlaseni.html"]:focus-visible{background:rgba(255,176,0,.12)}
 .header-button{white-space:nowrap;min-width:122px}
 
 .main-nav a,.header-button,.button,.service-card a,.contact-panel a{transition:color .18s ease,background-color .18s ease,border-color .18s ease,transform .18s ease}
@@ -17,6 +20,10 @@
 .button.secondary:hover{background:rgba(255,255,255,.14)}
 a:focus-visible,button:focus-visible{outline:3px solid #ffb000;outline-offset:3px;border-radius:6px}
 .service-card a:hover,.service-card a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:1180px){
+  .main-nav{gap:12px}
+}
 
 @media(max-width:1100px){
   .nav{justify-content:space-between}
