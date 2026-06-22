@@ -29,6 +29,7 @@ jobs:
               ('sprava-elektro-bezpecnosti.html', 'Správa elektro bezpečnosti'),
               ('garant-elektro.html', 'Garant elektro'),
               ('ezapp.html', 'EZApp'),
+              ('prihlaseni.html', 'Přihlášení'),
               ('kontakt.html', 'Kontakt'),
           ]
 
@@ -55,13 +56,13 @@ jobs:
 
               new_text = re.sub(
                   r'<link rel="stylesheet" href="navigation\.css(?:\?v=\d+)?">',
-                  '<link rel="stylesheet" href="navigation.css?v=3">',
+                  '<link rel="stylesheet" href="navigation.css?v=4">',
                   new_text,
                   count=1,
               )
 
-              if 'navigation.css?v=3' not in new_text:
-                  new_text = new_text.replace('</head>', '  <link rel="stylesheet" href="navigation.css?v=3">\n</head>', 1)
+              if 'navigation.css?v=4' not in new_text:
+                  new_text = new_text.replace('</head>', '  <link rel="stylesheet" href="navigation.css?v=4">\n</head>', 1)
 
               if new_text != text:
                   path.write_text(new_text, encoding='utf-8')
@@ -140,7 +141,7 @@ jobs:
 
           required = {
               'index.html', 'sluzby.html', 'sprava-elektro-bezpecnosti.html',
-              'garant-elektro.html', 'ezapp.html', 'kontakt.html'
+              'garant-elektro.html', 'ezapp.html', 'prihlaseni.html', 'kontakt.html'
           }
           for page in html_files:
               text = page.read_text(encoding='utf-8')
@@ -150,8 +151,8 @@ jobs:
               for target in required:
                   if f'href="{target}"' not in nav_text:
                       errors.append(f'{page}: horní lišta neobsahuje {target}')
-              if 'navigation.css?v=3' not in text:
-                  errors.append(f'{page}: nenačítá navigation.css?v=3')
+              if 'navigation.css?v=4' not in text:
+                  errors.append(f'{page}: nenačítá navigation.css?v=4')
 
           if errors:
               print('Nalezené chyby:')
@@ -170,5 +171,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html'
-          git commit -m "Sjednocena horní navigace a ověřeny interní odkazy"
+          git commit -m "Doplněno přihlášení zákazníka do horní navigace"
           git push
