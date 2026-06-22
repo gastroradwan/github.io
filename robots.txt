@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gastroradwan.eu/sitemap.xml
+Sitemap: https://www.gastroradwan.eu/sitemap.xml
