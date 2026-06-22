@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Přihlášení zákazníka | EZApp | GASTRORADWAN s.r.o.</title>
+  <meta name="description" content="Přihlášení zákazníka do připravovaného portálu EZApp pro zařízení, revize, dokumentaci, závady a harmonogramy společnosti GASTRORADWAN.">
+  <link rel="canonical" href="https://www.gastroradwan.eu/prihlaseni.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=18">
+  <script src="analytics.js?v=1" defer></script>
+  <link rel="stylesheet" href="navigation.css?v=4">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand logo-link" href="index.html" aria-label="GASTRORADWAN s.r.o."><img src="assets/logo-gastroradwan-dark.svg?v=1" alt="GASTRORADWAN s.r.o." class="brand-logo"></a>
+      <nav class="main-nav" aria-label="Hlavní navigace">
+        <a href="index.html">Úvod</a>
+        <a href="sluzby.html">Služby</a>
+        <a href="sprava-elektro-bezpecnosti.html">Správa elektro bezpečnosti</a>
+        <a href="garant-elektro.html">Garant elektro</a>
+        <a href="ezapp.html">EZApp</a>
+        <a href="prihlaseni.html" aria-current="page">Přihlášení</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="header-button" href="tel:+420604152218">604 152 218</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero subhero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Zákaznický portál EZApp</p>
+          <h1>Přihlášení zákazníka</h1>
+          <p class="hero-lead">Připravujeme zabezpečený přístup k provozům, zařízením, revizím, dokumentům, závadám a harmonogramům. Portál zatím není spuštěn pro veřejnou registraci.</p>
+          <div class="hero-tags"><span>Ověření e-mailu</span><span>Schválení účtu</span><span>Zařízení</span><span>Revize</span><span>Dokumenty</span><span>Harmonogramy</span></div>
+          <div class="hero-actions"><a class="button primary" href="mailto:info@gastroradwan.eu?subject=Zajem%20o%20zakaznicky%20portal%20EZApp">Mám zájem o přístup</a><a class="button secondary" href="ezapp.html">Více o EZApp</a></div>
+        </div>
+        <aside class="hero-panel"><strong>Aktuální stav</strong><p>Přihlášení a registrace jsou ve vývoji. Zákaznické účty budou spuštěny až po dokončení zabezpečení, ověřování e-mailu a přístupových pravidel.</p></aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Jak bude registrace fungovat</p><h2>Ověřený účet a řízený přístup k firmě</h2><p>Ověření e-mailu potvrdí, že adresa patří uživateli. Přístup k dokumentům konkrétní firmy vznikne až po schválení a přiřazení účtu administrátorem GASTRORADWAN.</p></div>
+        <div class="service-grid compact">
+          <article class="service-card"><div class="service-icon">1</div><h3>Vytvoření účtu</h3><p>Zákazník zadá jméno, pracovní e-mail a přihlašovací údaje.</p></article>
+          <article class="service-card"><div class="service-icon">2</div><h3>Ověření e-mailu</h3><p>Na zadanou adresu přijde potvrzovací odkaz.</p></article>
+          <article class="service-card"><div class="service-icon">3</div><h3>Schválení účtu</h3><p>GASTRORADWAN ověří, ke které firmě uživatel skutečně patří.</p></article>
+          <article class="service-card"><div class="service-icon">4</div><h3>Přiřazení firmy</h3><p>Účet získá přístup pouze ke konkrétně schválenému zákazníkovi a jeho datům.</p></article>
+          <article class="service-card"><div class="service-icon">5</div><h3>Zákaznický přehled</h3><p>Po přihlášení se zobrazí provozy, zařízení, platnosti revizí a harmonogramy.</p></article>
+          <article class="service-card"><div class="service-icon">6</div><h3>Dokumenty</h3><p>Zákazník uvidí pouze schválené revizní zprávy a zpřístupněné dokumenty.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section">
+      <div class="container split">
+        <div><p class="eyebrow">Proč není registrace otevřená hned</p><h2>Nejdříve bezpečnost, potom pohodlí</h2><p>Samotný formulář je jednoduchý. Složitější je zajistit, aby každý zákazník viděl jen vlastní data a aby se cizí uživatel nemohl přiřadit k jiné firmě pouze zadáním jejího názvu nebo IČO.</p></div>
+        <div class="dark-panel"><h3>Co musí být dokončeno</h3><ul class="checklist"><li>Supabase Auth a ověřovací e-maily,</li><li>schvalování zákaznických účtů,</li><li>přiřazení uživatele ke konkrétní firmě,</li><li>Row Level Security nad databází,</li><li>obnova hesla a správa relací,</li><li>audit přístupů a ochrana dokumentů.</li></ul></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
+        <div><p class="eyebrow">Máte zájem o zákaznický portál?</p><h2>Zařadíme vaši firmu mezi první zákazníky EZApp</h2><p>Napište nám. Připravíme evidenci firmy, provozů a zařízení tak, aby bylo možné zákaznický přístup později bezpečně aktivovat.</p></div>
+        <div class="dark-panel contact-panel"><h3>Kontakt GASTRORADWAN</h3><p><strong>Telefon:</strong><br><a href="tel:+420604152218">604 152 218</a></p><p><strong>E-mail:</strong><br><a href="mailto:info@gastroradwan.eu?subject=Zajem%20o%20portal%20EZApp">info@gastroradwan.eu</a></p><p><a class="button primary" href="poptavka.html">Nezávazná poptávka</a></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid"><div><a class="brand footer-brand logo-link" href="index.html"><img src="assets/logo-gastroradwan-dark.svg?v=1" alt="GASTRORADWAN s.r.o." class="footer-logo"></a><p>Komplexní správa elektro bezpečnosti firem.</p></div><div><h4>Kontakt</h4><p>604 152 218<br>info@gastroradwan.eu<br>revize@gastroradwan.eu<br>www.gastroradwan.eu</p></div><div><h4>Adresa</h4><p>Ostravská 262<br>735 62 Český Těšín – Mosty</p></div></div>
+    <div class="container copyright">© 2026 GASTRORADWAN s.r.o.</div>
+  </footer>
+</body>
+</html>
