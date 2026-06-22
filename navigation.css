@@ -11,6 +11,13 @@
 .main-nav a[href="kontakt.html"]{display:inline-flex}
 .header-button{white-space:nowrap;min-width:122px}
 
+.main-nav a,.header-button,.button,.service-card a,.contact-panel a{transition:color .18s ease,background-color .18s ease,border-color .18s ease,transform .18s ease}
+.main-nav a:hover,.main-nav a:focus-visible{color:#ffb000}
+.header-button:hover,.button.primary:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.button.secondary:hover{background:rgba(255,255,255,.14)}
+a:focus-visible,button:focus-visible{outline:3px solid #ffb000;outline-offset:3px;border-radius:6px}
+.service-card a:hover,.service-card a:focus-visible{text-decoration:underline;text-underline-offset:3px}
+
 @media(max-width:1100px){
   .nav{justify-content:space-between}
   .main-nav{justify-content:center;padding-left:0}
@@ -19,4 +26,11 @@
 @media(max-width:760px){
   .nav{justify-content:flex-start}
   .main-nav{justify-content:flex-start}
+  .main-nav{scroll-snap-type:x proximity}
+  .main-nav a{scroll-snap-align:start}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
