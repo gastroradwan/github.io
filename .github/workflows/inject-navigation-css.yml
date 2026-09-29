@@ -1,78 +1,29 @@
-name: Normalize Navigation and Check Links
+name: Validate Public Web
 
 on:
-  push:
+  pull_request:
     branches: [main]
     paths:
-      - '.github/workflows/inject-navigation-css.yml'
+      - '**/*.html'
+      - '**/*.css'
+      - '**/*.js'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'CNAME'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  normalize-and-check:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Normalize navigation on all HTML pages
-        shell: python
-        run: |
-          from pathlib import Path
-          import re
-
-          links = [
-              ('index.html', 'Úvod'),
-              ('sluzby.html', 'Služby'),
-              ('sprava-elektro-bezpecnosti.html', 'Správa elektro bezpečnosti'),
-              ('garant-elektro.html', 'Garant elektro'),
-              ('ezapp.html', 'EZApp'),
-              ('prihlaseni.html', 'Přihlášení'),
-              ('kontakt.html', 'Kontakt'),
-          ]
-
-          changed = []
-          for path in sorted(Path('.').glob('*.html')):
-              text = path.read_text(encoding='utf-8')
-              current = path.name
-              nav_items = []
-              for href, label in links:
-                  current_attr = ' aria-current="page"' if href == current else ''
-                  nav_items.append(f'        <a href="{href}"{current_attr}>{label}</a>')
-              nav = '<nav class="main-nav" aria-label="Hlavní navigace">\n' + '\n'.join(nav_items) + '\n      </nav>'
-
-              new_text, count = re.subn(
-                  r'<nav class="main-nav"(?:\s+aria-label="[^"]*")?>.*?</nav>',
-                  nav,
-                  text,
-                  count=1,
-                  flags=re.S,
-              )
-              if count == 0:
-                  print(f'ERROR: {path} nemá hlavní navigaci')
-                  raise SystemExit(1)
-
-              new_text = re.sub(
-                  r'<link rel="stylesheet" href="navigation\.css(?:\?v=\d+)?">',
-                  '<link rel="stylesheet" href="navigation.css?v=4">',
-                  new_text,
-                  count=1,
-              )
-
-              if 'navigation.css?v=4' not in new_text:
-                  new_text = new_text.replace('</head>', '  <link rel="stylesheet" href="navigation.css?v=4">\n</head>', 1)
-
-              if new_text != text:
-                  path.write_text(new_text, encoding='utf-8')
-                  changed.append(str(path))
-
-          print(f'Normalizováno {len(changed)} stránek')
-          for item in changed:
-              print(f'  - {item}')
-
-      - name: Check internal links, anchors and local assets
+      - name: Check navigation, internal links, anchors and local assets
         shell: python
         run: |
           from html.parser import HTMLParser
@@ -147,6 +98,9 @@ jobs:
               text = page.read_text(encoding='utf-8')
               nav_start = text.find('<nav class="main-nav"')
               nav_end = text.find('</nav>', nav_start)
+              if nav_start < 0 or nav_end < 0:
+                  errors.append(f'{page}: chybí hlavní navigace')
+                  continue
               nav_text = text[nav_start:nav_end]
               for target in required:
                   if f'href="{target}"' not in nav_text:
@@ -162,14 +116,9 @@ jobs:
 
           print(f'Kontrola dokončena: {len(html_files)} HTML souborů, {len(refs)} odkazů a zdrojů bez chyby.')
 
-      - name: Commit normalized pages
+      - name: Ensure CI did not modify repository files
         run: |
-          if git diff --quiet; then
-            echo "No HTML pages required an update."
-            exit 0
+          if ! git diff --exit-code; then
+            echo "ERROR: validační workflow nesmí měnit soubory."
+            exit 1
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- '*.html'
-          git commit -m "Doplněno přihlášení zákazníka do horní navigace"
-          git push
