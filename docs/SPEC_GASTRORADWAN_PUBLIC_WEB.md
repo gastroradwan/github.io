@@ -183,9 +183,11 @@ Volitelně:
 
 ## 9. EZApp a přihlášení
 
-Veřejný web nesmí implementovat vlastní autentizaci. Po spuštění zákaznických rolí bude položka „Přihlášení“ směřovat na schválenou adresu EZApp, předpokládaně `https://ez.gastroradwan.eu/login`.
+EZApp je již provozovaná interní aplikace GASTRORADWAN; veřejný zákaznický přístup a registrace však zatím nejsou produkčně zpřístupněny. Veřejný web nesmí implementovat vlastní autentizaci. Po spuštění zákaznických rolí bude položka „Přihlášení“ směřovat na schválenou adresu EZApp, předpokládaně `https://ez.gastroradwan.eu/login`.
 
 EZApp je jediným vlastníkem registrace, autentizace, obnovy hesla, relací, přiřazení uživatele k organizaci, rolí, RLS a přístupu k dokumentům.
+
+Produkční zpřístupnění zákaznických dat je **NO-GO**, dokud nebude dokončeno a negativně bezpečnostně otestováno `gastroradwan/EZApp#196 – DATA-PARTY-001C` a navazující zákaznický read model / oprávnění.
 
 ## 10. Ochrana osobních údajů a cookies
 
