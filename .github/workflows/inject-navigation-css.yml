@@ -90,10 +90,12 @@ jobs:
                   elif fragment not in ids[target_name]:
                       errors.append(f'{source}: chybí kotva #{fragment} v {target_name}')
 
-          required = {
-              'index.html', 'sluzby.html', 'sprava-elektro-bezpecnosti.html',
-              'garant-elektro.html', 'ezapp.html', 'prihlaseni.html', 'kontakt.html'
-          }
+          required = [
+              'index.html', 'sluzby.html', 'pro-firmy.html',
+              'sprava-elektro-bezpecnosti.html', 'ezapp.html',
+              'o-spolecnosti.html', 'poptavka.html',
+              'prihlaseni.html', 'kontakt.html'
+          ]
           for page in html_files:
               text = page.read_text(encoding='utf-8')
               nav_start = text.find('<nav class="main-nav"')
@@ -102,9 +104,19 @@ jobs:
                   errors.append(f'{page}: chybí hlavní navigace')
                   continue
               nav_text = text[nav_start:nav_end]
+              positions = []
               for target in required:
-                  if f'href="{target}"' not in nav_text:
-                      errors.append(f'{page}: horní lišta neobsahuje {target}')
+                  needle = f'href="{target}"'
+                  count = nav_text.count(needle)
+                  if count != 1:
+                      errors.append(f'{page}: hlavní navigace musí obsahovat právě jednou {target} (nalezeno {count})')
+                  else:
+                      positions.append(nav_text.index(needle))
+              if len(positions) == len(required) and positions != sorted(positions):
+                  errors.append(f'{page}: hlavní navigace nemá schválené pořadí položek')
+              nav_links = nav_text.count('<a ')
+              if nav_links != len(required):
+                  errors.append(f'{page}: hlavní navigace má {nav_links} odkazů, očekáváno {len(required)}')
               if 'navigation.css?v=4' not in text:
                   errors.append(f'{page}: nenačítá navigation.css?v=4')
 
