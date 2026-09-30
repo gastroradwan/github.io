@@ -20,7 +20,36 @@ Cílem je dát každé veřejné stránce jednoznačnou roli, odstranit obsahov�
 8. Přihlášení
 9. Kontakt
 
-## 3. Inventura současných URL
+## 3. Cílový strom veřejného webu
+
+- **Úvod** (`/`)
+- **Služby** (`/sluzby.html`)
+  - Správa elektro bezpečnosti
+  - Garant elektro
+  - Revize elektrických zařízení
+  - Revize hromosvodů a uzemnění
+  - Revize strojů a technologií
+  - Elektro dokumentace pro firmy
+  - Harmonogramy revizí, kontrol a školení
+  - Školení dle NV 194/2022 Sb.
+  - Příprava na OIP, TIČR, audity a pojišťovny
+  - nové odborné služby budou doplněny v WEB-004
+- **Pro firmy a průmysl**
+  - Pro firmy (`/pro-firmy.html`) – obecný vstup
+  - Pro průmysl (`/pro-prumysl.html`) – specializovaný průmyslový obsah
+- **EZApp** (`/ezapp.html`)
+  - Přihlášení / stav zákaznického přístupu (`/prihlaseni.html`)
+- **O společnosti** (`/o-spolecnosti.html`)
+  - Oprávnění a osvědčení
+  - Případové oblasti a reference
+  - Působnost
+  - Spolupráce s odbornými partnery
+- **Poptávka** (`/poptavka.html`)
+- **Kontakt** (`/kontakt.html`)
+
+Hlavní navigace obsahuje pouze devět položek schválených ve SPEC. Podstránky služeb a firemního profilu se zpřístupňují z příslušných rozcestníků a kontextových odkazů; nemají všechny zatěžovat hlavní navigaci.
+
+## 4. Inventura současných URL
 
 | Současná URL | Rozhodnutí | Cílová role / poznámka |
 |---|---|---|
@@ -49,7 +78,7 @@ Cílem je dát každé veřejné stránce jednoznačnou roli, odstranit obsahov�
 | /poptavka.html | PONECHAT + PŘEPRACOVAT | Do WEB-006 současný bezpečný kontaktní režim; cílově strukturovaná poptávka přes EZApp endpoint. |
 | /kontakt.html | PONECHAT + PŘEPRACOVAT | Autoritativní veřejná kontaktní stránka. |
 
-## 4. Hlavní obsahové překryvy
+## 5. Hlavní obsahové překryvy
 
 ### Pro firmy × Povinnosti firmy
 Obě stránky vysvětlují revize, dokumentaci, školení, harmonogramy, evidenci a kontroly. Cílově bude /pro-firmy.html hlavní obecný landing page a unikátní obsah z /povinnosti-firmy-elektro.html se do něj řízeně převede.
@@ -63,7 +92,7 @@ Neslučovat bez dalšího. /pro-firmy.html je obecný vstup pro organizace, spr�
 ### Reference
 /pripadove-oblasti-reference.html popisuje typy odborných zkušeností; /pusobnost-reference.html geografickou působnost. Zatím zachovat obě role, ale odstranit duplicitní obecné texty.
 
-## 5. EZApp – povinná korekce sdělení
+## 6. EZApp – povinná korekce sdělení
 
 Veřejný web musí důsledně rozlišovat:
 - **EZApp interní aplikace:** již provozovaná;
@@ -71,7 +100,7 @@ Veřejný web musí důsledně rozlišovat:
 - autentizace, role, RLS a zákaznická data jsou výhradně odpovědností EZApp;
 - produkční zákaznický přístup je NO-GO do splnění bezpečnostních gate dle řídicí specifikace.
 
-## 6. Redirect plán – návrh
+## 7. Redirect plán – návrh
 
 Po obsahové migraci a schválení:
 - `/povinnosti-firmy-elektro.html` → `/pro-firmy.html`;
@@ -79,7 +108,7 @@ Po obsahové migraci a schválení:
 
 Redirecty nesmí být nasazeny před kontrolou interních odkazů, sitemap, canonical URL a zachování hodnotného obsahu.
 
-## 7. Další krok
+## 8. Další krok
 
 Před produkční implementací:
 1. odborně schválit tuto inventuru;
