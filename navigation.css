@@ -1,15 +1,6 @@
 .site-header .logo-link:after{display:none!important}
 .main-nav{align-items:center;gap:18px}
-.main-nav a{display:none}
-.main-nav a[href="index.html"],
-.main-nav a[href="#uvod"],
-.main-nav a[href="/"],
-.main-nav a[href="sluzby.html"],
-.main-nav a[href="sprava-elektro-bezpecnosti.html"],
-.main-nav a[href="garant-elektro.html"],
-.main-nav a[href="ezapp.html"],
-.main-nav a[href="prihlaseni.html"],
-.main-nav a[href="kontakt.html"]{display:inline-flex}
+.main-nav a{display:inline-flex}
 .main-nav a[href="prihlaseni.html"]{padding:8px 12px;border:1px solid rgba(255,176,0,.5);border-radius:999px;color:#ffb000}
 .main-nav a[href="prihlaseni.html"]:hover,.main-nav a[href="prihlaseni.html"]:focus-visible{background:rgba(255,176,0,.12)}
 .header-button{white-space:nowrap;min-width:122px}
