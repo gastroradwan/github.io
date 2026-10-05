@@ -1,0 +1,35 @@
+name: Source recovery snapshot
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 3 * * 0'
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Create and verify source recovery bundle
+        run: |
+          mkdir recovery
+          git bundle create recovery/source.bundle --all
+          git bundle verify recovery/source.bundle
+          git clone --bare recovery/source.bundle recovery/restore-test.git
+          git -C recovery/restore-test.git fsck --full
+          git rev-parse HEAD > recovery/commit.txt
+          cd recovery
+          sha256sum source.bundle > source.bundle.sha256
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: source-recovery
+          path: |
+            recovery/source.bundle
+            recovery/source.bundle.sha256
+            recovery/commit.txt
+          retention-days: 90
+          if-no-files-found: error
